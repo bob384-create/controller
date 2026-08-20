@@ -2,7 +2,6 @@
 package com.applesauce3840.controller.client;
 
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.network.MessageType;
 import net.minecraft.text.Text;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
@@ -22,7 +21,7 @@ public class Commands {
                                         MinecraftClient client = MinecraftClient.getInstance();
                                         client.player.sendMessage(
                                                 Text.literal("Controller bot is online with no goal!"),
-                                                MessageType.SYSTEM, client.player.getUuid()
+                                                false
                                         );
                                         return 1;
                                     })
